@@ -9,7 +9,14 @@ import {Server, Socket} from 'socket.io';
 import {ChatService} from './chat.service';
 import {Room} from './schemas/room.schema';
 
-@WebSocketGateway(3001, {namespace: 'chat'})
+@WebSocketGateway(3001, {
+  cors: {
+    origin: 'https://thongdanghoang.id.vn/swapme',
+    credentials: true,
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }
+})
 export class ChatGateway {
   @WebSocketServer()
   server: Server;
@@ -47,6 +54,7 @@ export class ChatGateway {
     const messages = await this.chatService.getMessages(roomId);
     client.emit('messages', messages);
   }
+
   @SubscribeMessage('joinRoom')
   handleJoinRoom(client: Socket, roomId: string): void {
     void client.join(roomId);
