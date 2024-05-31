@@ -24,11 +24,15 @@ import {ChatModule} from './modules/chat/chat.module';
       port: 3306,
       username: 'root',
       password: 'root_P@ssW0rd',
-      database: 'swapme',
+      database: 'swapme_prod',
       entities: [UserEntity, NotificationEntity, ProductEntity, ExchangeEntity],
       synchronize: true
     }),
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/nest'), // Kết nối tới MongoDB
+    MongooseModule.forRoot('mongodb://thongdanghoang.id.vn:27017', {
+      dbName: 'nest',
+      user: 'rootUser',
+      pass: 'root_P@ssW0rd'
+    }),
     ChatModule,
     UserModule,
     ProductModule,
