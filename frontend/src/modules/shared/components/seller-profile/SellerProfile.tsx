@@ -11,7 +11,7 @@ import {formatDistanceToNow} from 'date-fns';
 import {vi} from 'date-fns/locale';
 
 // Replace with your NestJS server URL
-const socket = io('http://localhost:3001/chat', {
+const socket = io('https://thongdanghoang.id.vn', {
   transports: ['websocket'] // Ensure WebSocket transport is used
 });
 
