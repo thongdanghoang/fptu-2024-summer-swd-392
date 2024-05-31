@@ -11,8 +11,8 @@ import {
 import {UserDto} from '../../models/userDto.ts';
 import io from 'socket.io-client';
 
-// Replace with your NestJS server URL
-const socket = io('http://localhost:3001/chat', {
+const socket = io('https://thongdanghoang.id.vn', {
+  path: '/swapme/chat-gateway/socket.io',
   transports: ['websocket'] // Ensure WebSocket transport is used
 });
 
