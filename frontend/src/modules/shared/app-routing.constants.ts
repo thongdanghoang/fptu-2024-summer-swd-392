@@ -1,5 +1,5 @@
 export class AppRoutingConstants {
-  public static readonly BASE_URL: string = 'http://localhost:3000';
+  public static readonly BASE_URL: string = '/swapme/api';
 
   // Homepage
   public static readonly HOMEPAGE: string = '/';
