@@ -5,7 +5,8 @@ import './ChatList.scss';
 import {UserDto} from 'src/modules/shared/models/userDto.ts';
 import {AppRoutingConstants} from '../shared/app-routing.constants.ts';
 
-const socket = io('http://localhost:3001/chat', {
+const socket = io('https://thongdanghoang.id.vn', {
+  path: '/swapme/chat-gateway/socket.io',
   transports: ['websocket'],
   autoConnect: true
 });
