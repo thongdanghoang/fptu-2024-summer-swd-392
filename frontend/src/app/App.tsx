@@ -37,7 +37,7 @@ export default function App(): ReactElement {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [applicationService.isAuthenticated()]);
   return (
-    <Router>
+    <Router basename="/swapme">
       <LoadingProvider>
         <FullScreenSpinner />
         <ModalProvider>
