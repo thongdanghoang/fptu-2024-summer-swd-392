@@ -136,7 +136,7 @@ export default function AppFooter(): ReactElement {
           </div>
           <div className="copyright d-flex justify-content-between">
             <div className="footer-version-app regular-14">
-              Swapme Version 12.03.02
+              Swapme Version 0.4.0 at 091281ff
             </div>
             <div className="footer-location regular-14">
               Địa chỉ: Đại học FPT - E2a-7, Đường D1, Phường Long Thạnh Mỹ, Q9,
